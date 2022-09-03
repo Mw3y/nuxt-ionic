@@ -16,7 +16,7 @@ export const setupIcons = () => {
 
   nuxt.options.build.transpile.push(/ionicons/)
 
-  nuxt.hook('autoImports:sources', presets => {
+  nuxt.hook('imports:sources', presets => {
     presets.push(iconsPreset)
   })
 }

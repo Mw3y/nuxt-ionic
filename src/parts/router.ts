@@ -35,7 +35,7 @@ export const setupRouter = () => {
   })
 
   // Remove Nuxt useRoute & useRouter composables
-  nuxt.hook('autoImports:sources', sources => {
+  nuxt.hook('imports:sources', sources => {
     for (const source of sources) {
       if (source.from === '#app') {
         source.imports = source.imports.filter(

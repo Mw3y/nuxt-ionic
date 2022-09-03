@@ -74,6 +74,9 @@ export default defineNuxtModule<ModuleOptions>({
   meta: {
     name: 'nuxt-ionic',
     configKey: 'ionic',
+    compatibility: {
+      nuxt: '^3.0.0-rc.1',
+    },
   },
   defaults: {
     integrations: {
@@ -137,7 +140,7 @@ export default defineNuxtModule<ModuleOptions>({
     )
 
     // Add auto-imported composables
-    nuxt.hook('autoImports:sources', presets => {
+    nuxt.hook('imports:sources', presets => {
       presets.push(
         defineUnimportPreset({
           from: '@ionic/vue',
